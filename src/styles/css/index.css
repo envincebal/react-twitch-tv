@@ -3,6 +3,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Merriweather";
-  background-color: #FFC857; }
+  background-color: #f8c96b; }
   body .App {
-    margin: 20px; }
+    margin: 10px; }
+    body .App .header-body {
+      background-color: #4B367C;
+      border-radius: 5px;
+      border: 1px solid #000; }
+      body .App .header-body .header-title {
+        text-align: center;
+        color: #f8c96b;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 36px;
+        margin: 0;
+        padding: 10px; }
+    body .App .results-body {
+      max-width: 1000px;
+      margin: 25px auto 25px auto;
+      padding: 5px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background-color: #3e77a5;
+      text-align: center; }
+      body .App .results-body .button {
+        border-radius: 5px;
+        border: 1px solid #000;
+        text-align: center;
+        width: 30%;
+        margin: 0 4px;
+        padding: 10px 0;
+        font-size: 25px; }

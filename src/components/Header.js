@@ -2,7 +2,8 @@ import React from 'react';
 
 const Header = (props) => {
   return (
-    <div>
+    <div className="header-body">
+      <h1 className="header-title">Twitch TV Streams</h1>
     </div>
   );
 }
