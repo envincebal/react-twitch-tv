@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from "./components/Header";
 import User from "./components/User";
 import Buttons from "./components/Buttons";
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
@@ -19,19 +20,28 @@ class App extends Component {
   }
 
   getUsers() {
-    const url = "https://wind-bow.glitch.me/twitch-api/streams/";
+    const streamURL = "https://wind-bow.glitch.me/twitch-api/streams/";
+    const channelURL = "https://wind-bow.glitch.me/twitch-api/users/";
 
     this.state.users.forEach(user => {
-      fetch(url + user)
-        .then(data => data.json())
-        .then(response => {
+      axios(streamURL + user)
+        .then(response1 => {
+          if (response1.data.stream !== null) {
             this.setState({
-            userInfo: response
-          });
-          console.log(this.state.userInfo);
+              userInfo: this.state.userInfo.concat(response1)
+            });
+          } else {
+            axios(channelURL + user)
+              .then(response2 => {
+                this.setState({
+                  userInfo: this.state.userInfo.concat(response2)
+                });
 
+              })
+          }
         })
     })
+
   }
   render() {
     return (
@@ -39,6 +49,10 @@ class App extends Component {
         <Header />
         <div className="results-body">
           <Buttons />
+          {console.log(this.state.userInfo)}
+          {this.state.userInfo.map((info, i) => {
+
+          })}
         </div>
       </div>
     );
