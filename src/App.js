@@ -8,35 +8,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"],
       userInfo: [],
       online: false,
       offline: false
     }
   }
 
-  componentWillMount() {
+  componentWillMount = () => {
     this.getUsers();
   }
 
-  getUsers() {
+  getUsers = () => {
     const streamURL = "https://wind-bow.glitch.me/twitch-api/streams/";
     const channelURL = "https://wind-bow.glitch.me/twitch-api/users/";
+    const users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
-    this.state.users.forEach(user => {
+    users.forEach(user => {
       axios(streamURL + user)
         .then(response1 => {
-          if (response1.data.stream !== null) {
-            this.setState({
-              userInfo: this.state.userInfo.concat(response1)
-            });
+          if (response1.data.stream) {
+            this.setState(prevState => ({
+              userInfo: prevState.userInfo.concat(response1)
+            }));
           } else {
             axios(channelURL + user)
               .then(response2 => {
-                this.setState({
-                  userInfo: this.state.userInfo.concat(response2)
-                });
-
+                this.setState(prevState => ({
+                  userInfo: prevState.userInfo.concat(response2)
+                }));
               })
           }
         })
@@ -49,10 +48,26 @@ class App extends Component {
         <Header />
         <div className="results-body">
           <Buttons />
-          {console.log(this.state.userInfo)}
-          {this.state.userInfo.map((info, i) => {
-
-          })}
+          {
+            this.state.userInfo.map((info, i) => {
+              console.log(info.data.stream)
+              if (info.data.stream) {
+                return <User
+                  key={i}
+                  displayName={info.data.stream.channel.display_name}
+                  image={info.data.stream.channel.logo}
+                  status={info.data.stream.game + ":" + info.data.stream.channel.status}
+                />
+              } else {
+                return <User
+                  key={i}
+                  displayName={info.data.display_name}
+                  image={info.data.logo}
+                  status="Offline"
+                />
+              }
+            })
+          }
         </div>
       </div>
     );

@@ -4,7 +4,7 @@ const User = (props) => {
   return (
     <div className="user-container">
       <div className="img-container">
-        <img className="profile-pic" src={props.image} />
+        <img className="profile-pic" src={props.image} alt="avatar" />
       </div>
       <div className="details-container">
         <p className="display-name">{props.displayName}</p>
