@@ -40,6 +40,30 @@ body {
         margin: 0 4px;
         padding: 10px 0;
         font-size: 25px;
+        background-color: #4e40ce;
+        color: #fff;
+      }
+      .user-container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 20px 0;
+        .user-card{
+          width: 25%;
+          margin: 10px;
+          padding: 15px; 
+          border-radius: $border-radius;
+          .profile-pic{
+            max-width: 100%;
+            border-radius: $border-radius;
+          }
+        }
+        .online{
+          background-color: #47ec41;
+        }
+        .offline{
+          background-color: #ec4141;
+        }
       }
     }
   }

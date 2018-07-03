@@ -48,7 +48,8 @@ class App extends Component {
         <Header />
         <div className="results-body">
           <Buttons />
-          {
+          <div className="user-container">
+           {
             this.state.userInfo.map((info, i) => {
               console.log(info.data.stream)
               if (info.data.stream) {
@@ -68,6 +69,7 @@ class App extends Component {
               }
             })
           }
+          </div>
         </div>
       </div>
     );

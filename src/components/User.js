@@ -2,7 +2,8 @@ import React from 'react';
 
 const User = (props) => {
   return (
-    <div className="user-container">
+
+    <a href="" className={"user-card " + (props.status === "Offline" ? "offline" : "online")}>
       <div className="img-container">
         <img className="profile-pic" src={props.image} alt="avatar" />
       </div>
@@ -10,7 +11,7 @@ const User = (props) => {
         <p className="display-name">{props.displayName}</p>
         <p className="status">{props.status}</p>
       </div>
-    </div>
+    </a>
   );
 }
 

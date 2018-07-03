@@ -33,4 +33,23 @@ body {
         width: 30%;
         margin: 0 4px;
         padding: 10px 0;
-        font-size: 25px; }
+        font-size: 25px;
+        background-color: #4e40ce;
+        color: #fff; }
+      body .App .results-body .user-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 20px 0; }
+        body .App .results-body .user-container .user-card {
+          width: 25%;
+          margin: 10px;
+          padding: 15px;
+          border-radius: 5px; }
+          body .App .results-body .user-container .user-card .profile-pic {
+            max-width: 100%;
+            border-radius: 5px; }
+        body .App .results-body .user-container .online {
+          background-color: #47ec41; }
+        body .App .results-body .user-container .offline {
+          background-color: #ec4141; }
