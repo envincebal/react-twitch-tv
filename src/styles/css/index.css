@@ -35,10 +35,22 @@ body {
         padding: 10px 0;
         font-size: 25px;
         background-color: #4e40ce;
+        cursor: pointer;
         color: #fff; }
+        body .App .results-body .button:focus {
+          outline: none; }
+        body .App .results-body .button:hover {
+          background-color: #180c86; }
       body .App .results-body .user-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin: 20px 0; }
         body .App .results-body .user-container .user-card {
@@ -49,10 +61,13 @@ body {
           border: 1px solid #000; }
           body .App .results-body .user-container .user-card:link, body .App .results-body .user-container .user-card:visited {
             text-decoration: none;
-            color: #fff; }
+            color: #000; }
           body .App .results-body .user-container .user-card .profile-pic {
             max-width: 100%;
             border-radius: 5px; }
+          body .App .results-body .user-container .user-card .display-name {
+            font-weight: 700;
+            font-size: 20px; }
         @media screen and (max-width: 760px) {
           body .App .results-body .user-container .user-card {
             width: 40%; } }
