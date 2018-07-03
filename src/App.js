@@ -33,6 +33,7 @@ class App extends Component {
           } else {
             axios(channelURL + user)
               .then(response2 => {
+                console.log(response2);
                 this.setState(prevState => ({
                   userInfo: prevState.userInfo.concat(response2)
                 }));
@@ -57,14 +58,16 @@ class App extends Component {
                   key={i}
                   displayName={info.data.stream.channel.display_name}
                   image={info.data.stream.channel.logo}
-                  status={info.data.stream.game + ":" + info.data.stream.channel.status}
+                  status={[<br/>, info.data.stream.game]}
+                  profileLink={info.data.stream.channel.url}
                 />
               } else {
                 return <User
                   key={i}
                   displayName={info.data.display_name}
                   image={info.data.logo}
-                  status="Offline"
+                  status={[<br/>,"Offline"]}
+                  profileLink={"https://www.twitch.tv/" + info.data.display_name} 
                 />
               }
             })

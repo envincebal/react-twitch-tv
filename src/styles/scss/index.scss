@@ -27,7 +27,7 @@ body {
     .results-body{
       max-width: 1000px;
       margin: 25px auto 25px auto;
-      padding: 5px;
+      padding: 20px 5px 5px 5px;
       border: $border-solid;
       border-radius: $border-radius;
       background-color: #3e77a5;
@@ -51,15 +51,31 @@ body {
         .user-card{
           width: 25%;
           margin: 10px;
-          padding: 15px; 
+          padding: 10px;
           border-radius: $border-radius;
+          border: $border-solid;
+          &:link,
+          &:visited{
+           text-decoration: none;
+           color: #fff;
+          }
           .profile-pic{
             max-width: 100%;
             border-radius: $border-radius;
           }
         }
+        @media screen and (max-width: 760px) {
+          .user-card{
+            width: 40%;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .user-card{
+            width: 80%;
+          }
+        }
         .online{
-          background-color: #47ec41;
+          background-color: #3eb939;
         }
         .offline{
           background-color: #ec4141;

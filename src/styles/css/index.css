@@ -21,7 +21,7 @@ body {
     body .App .results-body {
       max-width: 1000px;
       margin: 25px auto 25px auto;
-      padding: 5px;
+      padding: 20px 5px 5px 5px;
       border: 1px solid #000;
       border-radius: 5px;
       background-color: #3e77a5;
@@ -44,12 +44,22 @@ body {
         body .App .results-body .user-container .user-card {
           width: 25%;
           margin: 10px;
-          padding: 15px;
-          border-radius: 5px; }
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #000; }
+          body .App .results-body .user-container .user-card:link, body .App .results-body .user-container .user-card:visited {
+            text-decoration: none;
+            color: #fff; }
           body .App .results-body .user-container .user-card .profile-pic {
             max-width: 100%;
             border-radius: 5px; }
+        @media screen and (max-width: 760px) {
+          body .App .results-body .user-container .user-card {
+            width: 40%; } }
+        @media screen and (max-width: 500px) {
+          body .App .results-body .user-container .user-card {
+            width: 80%; } }
         body .App .results-body .user-container .online {
-          background-color: #47ec41; }
+          background-color: #3eb939; }
         body .App .results-body .user-container .offline {
           background-color: #ec4141; }
