@@ -47,9 +47,9 @@ body{
         &:focus {
           outline: none;
         }
-        &:hover{
-          background-color: #180c86;
-        }
+      }
+      .focus{
+        background-color: #180c86;
       }
       .user-container {
         display: -webkit-box;

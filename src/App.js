@@ -9,7 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       userInfo: [],
-      permanentInfo: []
+      permanentInfo: [],
+      onlineFocus: false,
+      offlineFocus: false
     }
   }
 
@@ -20,7 +22,7 @@ class App extends Component {
   getUsers = () => {
     const streamURL = "https://wind-bow.glitch.me/twitch-api/streams/";
     const channelURL = "https://wind-bow.glitch.me/twitch-api/users/";
-    const users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+    const users = ["ESL_SC2", "kainr6", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
     users.forEach(user => {
       axios(streamURL + user)
@@ -44,7 +46,9 @@ class App extends Component {
   }
   allButton = () => {
     this.setState(prevState => ({
-      userInfo: prevState.permanentInfo
+      userInfo: prevState.permanentInfo,
+      onlineFocus: false,
+      offlineFocus: false
     }))
   }
   onlineButton = () => {
@@ -52,7 +56,9 @@ class App extends Component {
       return item.data.stream;
     });
     this.setState({
-      userInfo: filtered
+      userInfo: filtered,
+      onlineFocus: true,
+      offlineFocus: false
     });
   }
   offlineButton = () => {
@@ -60,7 +66,9 @@ class App extends Component {
       return !item.data.stream;
     });
     this.setState({
-      userInfo: filtered
+      userInfo: filtered,
+      onlineFocus: false,
+      offlineFocus: true
     });
   }
   render() {
@@ -70,8 +78,10 @@ class App extends Component {
         <div className="results-body">
           <Buttons
             all={this.allButton}
-            online={this.onlineButton}
-            offline={this.offlineButton}
+            onlineHandler={this.onlineButton}
+            offlineHandler={this.offlineButton}
+            onlineToggle={this.state.onlineFocus}
+            offlineToggle={this.state.offlineFocus}
           />
           <div className="user-container">
             {
