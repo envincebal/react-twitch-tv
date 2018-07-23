@@ -39,8 +39,8 @@ body {
         color: #fff; }
         body .App .results-body .button:focus {
           outline: none; }
-        body .App .results-body .button:hover {
-          background-color: #180c86; }
+      body .App .results-body .focus {
+        background-color: #180c86; }
       body .App .results-body .user-container {
         display: -webkit-box;
         display: -ms-flexbox;
