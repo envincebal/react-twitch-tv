@@ -22,7 +22,7 @@ class App extends Component {
   getUsers = () => {
     const streamURL = "https://wind-bow.glitch.me/twitch-api/streams/";
     const channelURL = "https://wind-bow.glitch.me/twitch-api/users/";
-    const users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+    const users = ["ESL_SC2", "kainr6", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
     users.forEach(user => {
       axios(streamURL + user)
