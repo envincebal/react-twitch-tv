@@ -2,7 +2,7 @@ import React from 'react';
 
 const User = (props) => {
   return (
-    <a href={props.profileLink} className={"user-card " + (props.status.includes("Offline") ? "offline" : "online")}>
+    <a href={props.profileLink} className={"user-card " + (props.status.includes("Offline") ? "offline" : "online")}target="_blank">
       <div className="img-container">
         <img className="profile-pic" src={props.image} alt="avatar" />
       </div>
