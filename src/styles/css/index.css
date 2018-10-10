@@ -7,7 +7,7 @@ body {
   body .App {
     margin: 10px; }
     body .App .header-body {
-      background-color: #4B367C;
+      background-color: #6441a5;
       border-radius: 5px;
       border: 1px solid #000; }
       body .App .header-body .header-title {
@@ -22,9 +22,6 @@ body {
       max-width: 1000px;
       margin: 25px auto 25px auto;
       padding: 20px 5px 5px 5px;
-      border: 1px solid #000;
-      border-radius: 5px;
-      background-color: #3e77a5;
       text-align: center; }
       body .App .results-body .button {
         border-radius: 5px;
@@ -34,13 +31,13 @@ body {
         margin: 0 4px;
         padding: 10px 0;
         font-size: 25px;
-        background-color: #4e40ce;
+        background-color: #8075e6;
         cursor: pointer;
         color: #fff; }
         body .App .results-body .button:focus {
           outline: none; }
       body .App .results-body .focus {
-        background-color: #180c86; }
+        background-color: #372b9e; }
       body .App .results-body .user-container {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -75,6 +72,6 @@ body {
           body .App .results-body .user-container .user-card {
             width: 80%; } }
         body .App .results-body .user-container .online {
-          background-color: #3eb939; }
+          background-color: #5bbe57; }
         body .App .results-body .user-container .offline {
-          background-color: #ec4141; }
+          background-color: #ce4949; }

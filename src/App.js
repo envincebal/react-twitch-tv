@@ -107,6 +107,7 @@ class App extends Component {
             }
           </div>
         </div>
+        {console.log(this.state.userInfo)}
       </div>
     );
   }
