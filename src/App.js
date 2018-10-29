@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     this.getUsers();
   }
 
@@ -44,6 +44,7 @@ class App extends Component {
         })
     })
   }
+
   allButton = () => {
     this.setState(prevState => ({
       userInfo: prevState.permanentInfo,
@@ -51,6 +52,7 @@ class App extends Component {
       offlineFocus: false
     }))
   }
+
   onlineButton = () => {
     const filtered = this.state.permanentInfo.filter((item) => {
       return item.data.stream;
@@ -61,6 +63,7 @@ class App extends Component {
       offlineFocus: false
     });
   }
+
   offlineButton = () => {
     const filtered = this.state.permanentInfo.filter((item) => {
       return !item.data.stream;
@@ -72,6 +75,8 @@ class App extends Component {
     });
   }
   render() {
+    const {userInfo, onlineFocus, offlineFocus} = this.state;
+
     return (
       <div className="App">
         <Header />
@@ -80,12 +85,12 @@ class App extends Component {
             all={this.allButton}
             onlineHandler={this.onlineButton}
             offlineHandler={this.offlineButton}
-            onlineToggle={this.state.onlineFocus}
-            offlineToggle={this.state.offlineFocus}
+            onlineToggle={onlineFocus}
+            offlineToggle={offlineFocus}
           />
           <div className="user-container">
             {
-              this.state.userInfo.map((info, i) => {
+              userInfo.map((info, i) => {
                 if (info.data.stream) {
                   return <User
                     key={i}
@@ -107,7 +112,6 @@ class App extends Component {
             }
           </div>
         </div>
-        {console.log(this.state.userInfo)}
       </div>
     );
   }
