@@ -4,74 +4,80 @@ body {
   padding: 0;
   font-family: "Merriweather";
   background-color: #f8c96b; }
-  body .App {
-    margin: 10px; }
-    body .App .header-body {
-      background-color: #6441a5;
-      border-radius: 5px;
-      border: 1px solid #000; }
-      body .App .header-body .header-title {
-        text-align: center;
-        color: #f8c96b;
-        letter-spacing: 3px;
-        text-shadow: 2px 2px 2px #000;
-        font-size: 36px;
-        margin: 0;
-        padding: 10px; }
-    body .App .results-body {
-      max-width: 1000px;
-      margin: 25px auto 25px auto;
-      padding: 20px 5px 5px 5px;
-      text-align: center; }
-      body .App .results-body .button {
-        border-radius: 5px;
-        border: 1px solid #000;
-        text-align: center;
-        width: 30%;
-        margin: 0 4px;
-        padding: 10px 0;
-        font-size: 25px;
-        background-color: #8075e6;
-        cursor: pointer;
-        color: #fff; }
-        body .App .results-body .button:focus {
-          outline: none; }
-      body .App .results-body .focus {
-        background-color: #372b9e; }
-      body .App .results-body .user-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: 20px 0; }
-        body .App .results-body .user-container .user-card {
-          width: 25%;
-          margin: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #000; }
-          body .App .results-body .user-container .user-card:link, body .App .results-body .user-container .user-card:visited {
-            text-decoration: none;
-            color: #000; }
-          body .App .results-body .user-container .user-card .profile-pic {
-            max-width: 100%;
-            border-radius: 5px; }
-          body .App .results-body .user-container .user-card .display-name {
-            font-weight: 700;
-            font-size: 20px; }
-        @media screen and (max-width: 760px) {
-          body .App .results-body .user-container .user-card {
-            width: 40%; } }
-        @media screen and (max-width: 500px) {
-          body .App .results-body .user-container .user-card {
-            width: 80%; } }
-        body .App .results-body .user-container .online {
-          background-color: #5bbe57; }
-        body .App .results-body .user-container .offline {
-          background-color: #ce4949; }
+
+.App {
+  margin: 10px; }
+
+.header-body {
+  background-color: #6441a5;
+  border-radius: 5px;
+  border: 1px solid #000; }
+  .header-body .header-title {
+    text-align: center;
+    color: #f8c96b;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 36px;
+    margin: 0;
+    padding: 10px; }
+
+.results-body {
+  max-width: 1000px;
+  margin: 25px auto 25px auto;
+  padding: 20px 5px 5px 5px;
+  text-align: center; }
+
+.button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  text-align: center;
+  width: 30%;
+  margin: 0 4px;
+  padding: 10px 0;
+  font-size: 25px;
+  background-color: #8075e6;
+  cursor: pointer;
+  color: #fff; }
+  .button:focus {
+    outline: none; }
+
+.focus {
+  background-color: #372b9e; }
+
+.user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0; }
+  .user-container .user-card {
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000; }
+    .user-container .user-card:link, .user-container .user-card:visited {
+      text-decoration: none;
+      color: #000; }
+    .user-container .user-card .profile-pic {
+      max-width: 100%;
+      border-radius: 5px; }
+    .user-container .user-card .display-name {
+      font-weight: 700;
+      font-size: 20px; }
+  @media screen and (max-width: 760px) {
+    .user-container .user-card {
+      width: 40%; } }
+  @media screen and (max-width: 500px) {
+    .user-container .user-card {
+      width: 80%; } }
+  .user-container .online {
+    background-color: #5bbe57; }
+  .user-container .offline {
+    background-color: #ce4949; }

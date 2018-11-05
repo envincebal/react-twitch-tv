@@ -4,100 +4,115 @@ $primary-color: #f8c96b;
 $border-solid: 1px solid #000;
 $border-radius: 5px;
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: $font-primary;
   background-color: $primary-color;
-  .App {
-    margin: 10px;
-    .header-body {
-      background-color: #6441a5;
-      border-radius: $border-radius;
-      border: $border-solid;
-      .header-title {
-        text-align: center;
-        color: $primary-color;
-        letter-spacing: 3px;
-        text-shadow: 2px 2px 2px #000;
-        font-size: 36px;
-        margin: 0;
-        padding: 10px;
-      }
-    }
-    .results-body {
-      max-width: 1000px;
-      margin: 25px auto 25px auto;
-      padding: 20px 5px 5px 5px;
+}
 
-      text-align: center;
-      .button {
-        border-radius: $border-radius;
-        border: $border-solid;
-        text-align: center;
-        width: 30%;
-        margin: 0 4px;
-        padding: 10px 0;
-        font-size: 25px;
-        background-color: #8075e6;
-        cursor: pointer;
-        color: #fff;
-        &:focus {
-          outline: none;
-        }
-      }
-      .focus{
-        background-color: #372b9e;
-      }
-      .user-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        margin: 20px 0;
-        .user-card {
-          width: 25%;
-          margin: 10px;
-          padding: 10px;
-          border-radius: $border-radius;
-          border: $border-solid;
-          &:link,
-          &:visited {
-            text-decoration: none;
-            color: #000;
-          }
-          .profile-pic {
-            max-width: 100%;
-            border-radius: $border-radius;
-          }
-          .display-name{
-            font-weight: 700;
-            font-size: 20px;
-          }
-        }
-        @media screen and (max-width: 760px) {
-          .user-card {
-            width: 40%;
-          }
-        }
-        @media screen and (max-width: 500px) {
-          .user-card {
-            width: 80%;
-          }
-        }
-        .online {
-          background-color: #5bbe57;
-        }
-        .offline {
-          background-color: #ce4949;
-        }
-      }
+.App {
+  margin: 10px;
+}
+
+.header-body {
+  background-color: #6441a5;
+  border-radius: $border-radius;
+  border: $border-solid;
+
+  .header-title {
+    text-align: center;
+    color: $primary-color;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 36px;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.results-body {
+  max-width: 1000px;
+  margin: 25px auto 25px auto;
+  padding: 20px 5px 5px 5px;
+  text-align: center;
+}
+
+.button {
+  border-radius: $border-radius;
+  border: $border-solid;
+  text-align: center;
+  width: 30%;
+  margin: 0 4px;
+  padding: 10px 0;
+  font-size: 25px;
+  background-color: #8075e6;
+  cursor: pointer;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.focus {
+  background-color: #372b9e;
+}
+
+.user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0;
+
+  .user-card {
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: $border-radius;
+    border: $border-solid;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: #000;
     }
+
+    .profile-pic {
+      max-width: 100%;
+      border-radius: $border-radius;
+    }
+
+    .display-name {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .user-card {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .user-card {
+      width: 80%;
+    }
+  }
+
+  .online {
+    background-color: #5bbe57;
+  }
+
+  .offline {
+    background-color: #ce4949;
   }
 }
